@@ -1,0 +1,20 @@
+// Change breakpoints of Bootstrap
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1140px,
+  xl: 1280px,
+  xxl: 1440px
+);
+
+$container-max-widths: (
+  sm: 480px,
+  md: 706px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1380px
+);
+
+// Import Bootstrap styles
+@import './libraries/bootstrap/bootstrap';

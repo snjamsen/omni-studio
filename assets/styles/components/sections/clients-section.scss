@@ -1,0 +1,57 @@
+section.clients {
+  position: relative;
+  z-index: 2;
+
+  padding: 50px 0;
+  overflow: hidden;
+
+  .container {
+    max-width: 1600px;
+  }
+
+  .section-description {
+    margin-top: 20px;
+  }
+
+  .cassette-row {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 50px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+
+      top: -50px;
+      left: 0;
+
+      width: 100%;
+      height: calc(100% + 100px);
+
+      background: url('../images/backgrounds/try-now-background.png') no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+  .cassette-block {
+    a {
+      display: inline-block;
+    }
+    img {
+      width: 100%;
+      max-height: 400px;
+
+      object-fit: contain;
+      object-position: center;
+
+      transition: 0.2s ease;
+
+      &:hover {
+        filter: brightness(110%);
+        transform: scale(1.05) rotate(-2.5deg);
+      }
+    }
+  }
+}

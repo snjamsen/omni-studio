@@ -1,0 +1,52 @@
+footer {
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+
+  font-family: 'Myriad Pro', sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 400;
+
+  padding: 50px 0 30px 0;
+
+  .logo {
+    img {
+      height: 50px;
+    }
+  }
+
+  .footer-title {
+    display: flex;
+    align-items: flex-end;
+    min-height: 50px;
+    margin-bottom: 1.5rem;
+
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  ul.nav.flex-column {
+    li.nav-item {
+      a.nav-link {
+        padding: 0;
+        color: $white;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+
+  .copyright-row {
+    margin-top: 30px;
+
+    padding-top: 30px;
+    border-top: 1px solid rgba($white, 0.1);
+  }
+}
