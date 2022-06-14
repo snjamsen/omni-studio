@@ -22,6 +22,9 @@ window.addEventListener('load', function () {
     	preloader.classList.remove('show-preloader');
 });
 
+// 
+
+//TODO:
 // Episodes dropdown list
 function show_list() {
   var episodes = document.getElementById("episodes_id");
@@ -38,7 +41,7 @@ window.onclick = function (event) {
   }
 };
 
-/* Boost calculate */
+// Boost calculate
 let boostResult = document.querySelector(".boost__counter--sum");
 let boostSum = document.querySelector(".boost-sum");
 let boostValue;
@@ -58,16 +61,6 @@ let titleLenght = document.querySelector(".title-form__input-title--display");
 function titleInput(title) {
   title = title.value.length;
   titleLenght.innerHTML = title + "/40";
-}
-
-// Input subtitle
-let subtitleLenght = document.querySelector(
-  ".title-form__input-subtitle--display"
-);
-
-function subtitleInput(subtitle) {
-  subtitle = subtitle.value.length;
-  subtitleLenght.innerHTML = subtitle + "/111";
 }
 
 // Block enter on textarea title

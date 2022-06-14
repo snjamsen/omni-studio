@@ -53,7 +53,7 @@ header .header {
     align-items: center;
     
     padding: 0 15px;
-    margin: 20px auto;
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 760px) {
@@ -62,25 +62,36 @@ header .header {
     }
 }
 
-.heder--logo {
-    width: 150px;
+.mowpod-logo {
+    width: 100px;
 }
 
-@media screen and (max-width: 720px) {
-    .heder--logo {
-        width: 100px;
+@media screen and (min-width:390px) {
+    .mowpod-logo {
+        width: 115px;
     }
 }
 
-.header__logout a {
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: .2s;
+@media screen and (min-width: 720px) {
+    .mowpod-logo {
+        width: 150px;
+    }
 }
 
-.header__logout a:hover {
-    color: #fff;
-    font-size: 1.04em;
+.omni-logo {
+    width: 140px;
+}
+
+@media screen and (min-width:390px) {
+    .omni-logo {
+        width: 150px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .omni-logo {
+        width: 250px;
+    }
 }
 
 /* Main */
@@ -122,158 +133,20 @@ header .header {
     }
 }
 
-.title-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    width: 100%;
+.title-form .how-this-works {
+    margin-bottom: 40px;
 }
 
-.title-header img {
-    border-radius: 15px;
-
-    width: 340px;
-    height: 340px;
-    margin: 0 auto;
-}
-
-@media screen and (max-width: 1074px) {
-    .title-header img {
-        max-width: 420px;
-        width: 100%;
-        height: auto;
-        margin: 20px auto;
-    }
-}
-
-@media screen and (max-width: 760px) {
-    .title-header img {
-        margin: 15px auto;
-    }
-}
-
-.episode-description {
-    display: flex;
-    justify-content: center;
-
-    margin: 35px 0;
-}
-
-@media screen and (max-width: 1074px) {
-    .episode-description {
-        flex-direction: column;
-        margin-top: 25px;
-        margin-bottom: 5px;
-    }
-}
-
-.episode-description__text {
-    display: flex;
-    flex-direction: column;
-
-    min-height: 200px;
-    margin-left: 55px;
-}
-
-@media screen and (max-width: 1074px) {
-    .episode-description__text {
-        margin-top: 25px;
-        margin-bottom: 25px;
-        margin-left: 0;
-    }
-}
-
-.episode-description__text .orange-text {
-    font-size: 26px;
-    text-transform: uppercase;
-    font-weight: 800;
-
-    margin-bottom: 5px;
-}
-
-@media screen and (max-width: 1110px) {
-    .episode-description__text .orange-text {
-        font-size: 22px;
-    }
-}
-
-@media screen and (max-width: 740px) {
-    .episode-description__text .orange-text {
-        font-size: 20px;
-    }
-}
-
-.episode-description__text .choose-episode {
-    font-size: 22px;
-    font-weight: 400;
-    color: #b6b6b6;
-
-    margin-bottom: 10px;
-}
-
-@media screen and (max-width: 1110px) {
-    .episode-description__text .choose-episode {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 740px) {
-    .episode-description__text .choose-episode {
-        font-size: 16px;
-    }
-}
-
-.episode-description__text--title {
+.title-form .how-this-works h4 {
     font-size: 28px;
-    font-weight: 700;
-    color: var(--blue-text);
-    text-transform: uppercase;
-}
-
-@media screen and (max-width: 1110px) {
-    .episode-description__text--title {
-        font-size: 24px;
-    }
-}
-
-@media screen and (max-width: 740px) {
-    .episode-description__text--title {
-        font-size: 22px;
-    }
-}
-
-.episode-description__text--subtitle {
-    font-size: 18px;
-    font-weight: 400;
-
-    margin: auto 0 0;
-}
-
-@media screen and (max-width: 1110px) {
-    .episode-description__text--subtitle {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 740px) {
-    .episode-description__text--subtitle {
-        font-size: 14px;
-    }
-}
-
-.title-form-text div {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-end;
+    font-weight: 600;
 
     margin-bottom: 15px;
 }
 
-@media screen and (max-width: 920px) {
-    .title-form-text div {
-        flex-wrap: wrap;
-    }
+.title-form .how-this-works p {
+    font-size: 22px;
+    font-weight: 400;
 }
 
 .title-form label {
@@ -285,19 +158,22 @@ header .header {
 }
 
 @media screen and (max-width: 920px) {
-    .title-form label {
+    .title-form label,
+    .title-form h4 {
         font-size: 24px;
     }
 }
 
 @media screen and (max-width: 740px) {
-    .title-form label {
+    .title-form label,
+    .title-form h4 {
         font-size: 22px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .title-form label {
+    .title-form label,
+    .title-form h4 {
         font-size: 20px;
     }
 }
@@ -347,12 +223,6 @@ header .header {
     color: rgba(255, 255, 255, 0.644);
     display: inline-block;
     margin: 0 auto;
-}
-
-.title-form__input-subtitle {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    min-height: 80px;
 }
 
 .title-form textarea,
@@ -412,6 +282,20 @@ header .header {
 @media screen and (max-width: 920px) {
     .title-form span {
         flex: auto;
+    }
+}
+
+.title-form-text div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 920px) {
+    .title-form-text div {
+        flex-wrap: wrap;
     }
 }
 
@@ -641,7 +525,9 @@ header .header {
     bottom: 20px;
 }
 
-.card__form input[type="text"] {
+.card__form input[type="text"],
+.card__login input[type="email"],
+.card__login input[type="password"] {
     font-family: 'Menlo', sans-serif;
     font-size: 28px;
     color: #fff;
@@ -657,7 +543,9 @@ header .header {
 
 @media screen and (max-width: 740px) {
 
-    .card__form input[type="text"] {
+    .card__form input[type="text"],
+    .card__login input[type="email"],
+    .card__login input[type="password"] {
         font-size: 24px;
         min-height: 40px;
         padding: 10px 25px;
@@ -667,7 +555,9 @@ header .header {
 
 @media screen and (max-width: 500px) {
 
-    .card__form input[type="text"] {
+    .card__form input[type="text"],
+    .card__login input[type="email"],
+    .card__login input[type="password"] {
         font-size: 20px;
         min-height: 25px;
         padding: 5px 15px;
@@ -675,7 +565,9 @@ header .header {
     }
 }
 
-.card__form input[type="text"]:focus {
+.card__form input[type="text"]:focus,
+.card-input--login input[type="email"]:focus,
+.card-input--login input[type="password"]:focus {
     color: #fff;
 }
 
@@ -683,7 +575,9 @@ header .header {
     text-align: center;
 }
 
-.card-input--name input[type="text"] {
+.card-input--name input[type="text"],
+.card-input--login input[type="email"],
+.card-input--login input[type="password"] {
     text-align: left;
 }
 
@@ -1202,18 +1096,6 @@ header .header {
     min-height: 800px;
 }
 
-.background__rainbow--image.rainbow--third {
-    background-image: url(../images/rainbow.png);
-
-    top: 2550px;
-}
-
-@media screen and (min-width: 1420px) {
-    .background__rainbow--image.rainbow--third {
-        display: none;
-    }
-}
-
 .background-sun {
     position: absolute;
     z-index: -3;
@@ -1251,12 +1133,12 @@ header .header {
 }
 
 .airpod-right {
-    top: 20%;
+    top: 10%;
     right: 15px;
 }
 
 .airpod-left {
-    top: 70%;
+    top: 50%;
     left: 15px;
 }
 

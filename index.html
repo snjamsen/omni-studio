@@ -39,86 +39,58 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-    <div class="preloader"><img src="./assets/images/mowpod-boost-logo.png" alt="logotype"></div>
+    <div class="preloader"><img src="./assets/images/mowpod-audio-logo.png" alt="logotype"></div>
     <div class="backgrounds">
         <div class="background__rainbow">
             <div class="background__rainbow--image rainbow--first rellax data-rellax-speed="-7""></div>
             <div class="background__rainbow--image rainbow--second rellax data-rellax-speed="-7""></div>
-            <div class="background__rainbow--image rainbow--third rellax data-rellax-speed="-7""></div>
         </div>
         <div class="background-sun"></div>
     </div>
     <header>
         <div class="header container">
-            <a href="./list.html"><img class="heder--logo" src="./assets/images/mowpod-boost-logo.png" alt="mowpod boost logotype"></a>
-            <div class="header__logout"><a href="./login.html">Logout</a></div>
+            <a href="./list.html"><img class="header--logo mowpod-logo" src="./assets/images/mowpod-audio-logo.png" alt="mowpod audio logotype"></a>
+            <a href="./list.html"><img class="header--logo omni-logo" src="./assets/images/omny-studio-logo.png" alt="omni studio logotype"></a>
         </div>
     </header>
-    <div class="boost-page title">
-        <h1 class="rotate" data-aos="fade-up" data-aos-delay="500" data-aos-duration="300">Get more IAB2.0 <br/>downloads to your podcast!</h1>
-    </div>
     <main>
         <form class="main container">
             <img class="airpod-right rellax data-rellax-speed="2"" src="./assets/images/gifs/airpod-right.gif" alt="airpod image">
             <img class="airpod-left rellax data-rellax-speed="2"" src="./assets/images/gifs/airpod-left.gif" alt="airpod image">
-            <div class="title-header">
-                <div class="title-form">
+            <div class="title-form">
+                <div class="how-this-works">
+                    <h4 class="orange-text">How this works?</h4>
+                    <p>Omny has partnered with mowpod lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam dicta voluptatem est placeat beatae. Unde enim id earum aspernatur molestiae perspiciatis labore ad temporibus optio numquam, totam nam provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellendus doloribus sunt, aliquam libero quo enim, officia et perspiciatis.</p>
+                </div>
+
+                <div class="file-upload">
                     <div>
-                        <label for="title-form__input-rss" class="orange-text">RSS Feed Link</label>
-                        <input type="url" class="title-form__input-rss" id="title-form__input-rss" name="rss" placeholder="https://example.com/your-pdocast-url/" pattern="https://.*" size="30">
-                        <label for="title-form__input-episode" class="orange-text">Episode</label>
-                        <div class="episodes-list">
-                            <a class="dropdown_button"
-                                onclick="show_list()">
-                                Karaoke from around the world
-                            </a>
-                            <nav id="episodes_id" class="episodes">
-                                <!-- Example list -->
-                                <li><a href="#">Pop back into the 80s</a></li>
-                                <li><a href="#">Bowling for pop punk with Jaret Reddick</a></li>
-                                <li><a href="#">Karaoke goes grunge</a></li>
-                                <li><a href="#">Disney karaoke, fnk style</a></li>
-                            </nav>
-                        </div>
+                        
                     </div>
+                    <input type="file" name="file" id="file-input" accept=".mp3">
                 </div>
-                <div class="episode-description">
-                    <img class="episode-description--img" src="./assets/images/podcast-preview-img.png" alt="podcast preview">
-                    <div class="episode-description__text">
-                        <div class="orange-text">
-                            <span>Karaoke from around the world</span>
-                        </div>
-                        <div class="choose-episode">
-                            <span>Friday Night Karaoke</span>
-                        </div>
-                        <!-- Insert episode subtitle below -->
-                        <div class="episode-description__text--subtitle">
-                            <span>This week, we (colectively) took a vacation to travel the world and sign songs from the far reaches of the planet. Took a vacation to travel the world and sign songs from the far reaches of the planet. Week, we took a vacation to travel the world and sign songs. Songs from the far reaches of the planet. Took a vacation to travel the far reaches of the planet. Week, we took a vacation to travel the world and sign songs from the far reaches of the planet.</span>
-                        </div>
+
+                <div>
+                    <label for="title-form__input-rss" class="orange-text">RSS Feed Link</label>
+                    <input type="url" class="title-form__input-rss" id="title-form__input-rss" name="rss" placeholder="https://example.com/your-pdocast-url/" pattern="https://.*" size="30">
+                </div>
+                <div class="title-form-text">
+                    <label for="title-form__input-title" class="orange-text">Title</label>
+                    <div>
+                        <textarea class="title-form__input-title" id="title-form__input-title" name="title" maxlength="40" onkeyup="titleInput(this)" placeholder="Enter podcast title" required></textarea>
+                        <span class="title-form__input-title--display">0/40</span>
                     </div>
-                </div>
-                <div class="title-form title-form-text">
-                    <section>
-                        <label for="title-form__input-title" class="orange-text">Title</label>
-                        <div>
-                            <textarea class="title-form__input-title" id="title-form__input-title" name="title" maxlength="40" onkeyup="titleInput(this)" placeholder="Enter podcast title" required></textarea>
-                            <span class="title-form__input-title--display">0/40</span>
-                        </div>
-                        <label for="title-form__input-subtitle" class="orange-text">Subtitle</label>
-                        <div>
-                            <textarea class="title-form__input-subtitle" id="title-form__input-subtitle" name="subtitle" maxlength="111" onkeyup="subtitleInput(this)" placeholder="Enter podcast subtitle" required></textarea>
-                            <span class="title-form__input-subtitle--display">0/111</span>
-                        </div>
-                    </section>
                 </div>
             </div>
             <div class="boost">
                 <div class="boost__container">
                     <div class="boost__counter">
                         <input class="boost__counter--input" type="number" value="500" onkeyup="boostInput(this)" min="300" required>
-                        <span>@ $.80 per download = <span class="boost__counter--sum orange-text"><br/>
-                            $400
-                        </span></span>
+                        <span>@ $.80 per download = 
+                            <span class="boost__counter--sum orange-text">
+                                <br/>$400
+                            </span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -169,6 +141,18 @@
                         <div class="card-input--zip">
                             <label for="user_zip-code">ZIP Code</label>
                             <input type="text" name="zip-code" id="user_zip-code" placeholder="00000" minlength="5" maxlength="6" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__login">
+                    <div class="card-input--login">
+                        <div class="card-input--mail">
+                            <label for="user_login">Email address</label>
+                            <input type="email" name="login" id="user_login" placeholder="email" maxlength="25" required>
+                        </div>
+                        <div class="card-input--password">
+                            <label for="user_password">Password</label>
+                            <input type="password" name="password" id="user_password" placeholder="•••••••••••••••" minlength="6" maxlength="64" required>
                         </div>
                     </div>
                 </div>
