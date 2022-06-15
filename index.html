@@ -66,16 +66,15 @@
                 <div class="file-upload">
                     <label for="fileInput" class="orange-text">Upload your MP3 file</label>
                     <div class="file-upload--container">
-                        <div class="drop-container" id="dropContainer">
-                            <label for="fileInput">Drop your 30-second MP3 file or click to Browse</label>
-                            <input type="file" name="file" class="file-input" id="fileInput" accept="audio/*" value="Browse">
+                        <div class="drop-zone" id="dropZone">
+                            <span class="drop-zone__prompt">Drop your 30-second MP3 file or click to Browse</span>
+                            <input type="file" name="file" class="file-input drop-zone__input" id="fileInput" > 
                         </div>
                         <div class="file-input-button--conatiner">
-                            <label for="fileInput" class="file-input-button">Browse</label>
+                            <div class="file-input-button">Browse</div>
                         </div>
                     </div>
                 </div>
-
                 <div>
                     <label for="title-form__input-rss" class="orange-text">RSS Feed Link</label>
                     <input type="url" class="title-form__input-rss" id="title-form__input-rss" name="rss" placeholder="https://example.com/your-pdocast-url/" pattern="https://.*" size="30">
