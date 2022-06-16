@@ -376,14 +376,15 @@ header .header {
     background-color: var(--input-gray);
     cursor: pointer;
     color: var(--placeholder-text);
-    transition: .1s ease;
+    transition: 0.2s ease;
 
     width: 78%;
     height: 60px;
 }
 
 .drop-zone:hover {
-    
+    border-style: solid;
+    color: rgba(255, 255, 255, 0.884);
 }
 
 @media screen and (max-width: 880px) {
@@ -480,7 +481,7 @@ span.drop-zone__file-name::after {
     text-transform: uppercase;
     text-align: center;
     visibility: initial;
-    transition: .2s ease;
+    transition: 0.2s ease;
 
     height: 60px;
     width: 180px;
