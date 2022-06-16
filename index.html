@@ -35,7 +35,7 @@
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="./assets/styles/styles.css"/>
     <link rel="preload" as="image" href="./assets/images/rainbow.png"/>
-    <link rel="preload" as="image" href="./assets/images/gifs/computer.gif"/>
+    <link rel="preload" as="image" crossorigin="anonymous" href="./assets/images/gifs/computer.gif"/>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
@@ -86,15 +86,45 @@
                         <span class="title-form__input-title--display">0/40</span>
                     </div>
                 </div>
+                <div class="title-form-category">
+                    <label for="category" class="orange-text">Category</label>
+                    <select name="category" id="category" required>
+                        <option value="music" hidden>Music</option>
+                        <option value="arts">Arts</option>
+                        <option value="business">Business</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="education">Education</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="goverment">Goverment</option>
+                        <option value="history">History</option>
+                        <option value="kids & family">Kids & Family</option>
+                        <option value="leisure">Leisure</option>
+                        <option value="music">Music</option>
+                        <option value="news">News</option>
+                        <option value="religion&spirituality">Religion & Spirituality</option>
+                        <option value="science">Science</option>
+                        <option value="society & culture">Society & Culture</option>
+                        <option value="sports">Sports</option>
+                        <option value="technology">Technology</option>
+                        <option value="true crime">True Crime</option>
+                        <option value="tv & film">TV & Film</option>
+                    </select>
+                </div>
             </div>
             <div class="boost">
                 <div class="boost__container">
-                    <div class="boost__counter">
-                        <input class="boost__counter--input" type="number" value="500" onkeyup="boostInput(this)" min="300" required>
-                        <span>@ $.80 per download = 
-                            <span class="boost__counter--sum orange-text">
-                                <br/>$400
-                            </span>
+                    <div class="boost__impressions">
+                        <div class="boost__impressions--select">
+                            <label for="impressions" class="orange-text">Impressions</label>
+                            <select name="impressions" id="impressions" required>
+                                <option value="4000" selected>4000</option>
+                                <option value="6000">6000</option>
+                                <option value="8000">8000</option>
+                                <option value="10000">10000</option>
+                            </select>
+                        </div>
+                        <span class="boost__impressions--inf">@ $25 CPM = 
+                            <span class="boost__impressions--sum orange-text"> $100</span>
                         </span>
                     </div>
                 </div>

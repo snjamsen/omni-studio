@@ -201,7 +201,8 @@ header .header {
     }
 }
 
-.title-form label {
+.title-form label,
+.boost__impressions label {
     font-size: 28px;
     display: inline-block;
 
@@ -210,21 +211,24 @@ header .header {
 
 @media screen and (max-width: 920px) {
     .title-form label,
-    .title-form h4 {
+    .title-form h4,
+    .boost__impressions label {
         font-size: 24px;
     }
 }
 
 @media screen and (max-width: 740px) {
     .title-form label,
-    .title-form h4 {
+    .title-form h4,
+    .boost__impressions label {
         font-size: 22px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .title-form label,
-    .title-form h4 {
+    .title-form h4,
+    .boost__impressions label {
         font-size: 20px;
     }
 }
@@ -335,6 +339,12 @@ header .header {
     }
 }
 
+.title-form-text textarea.title-form__input-title,
+.title-form-text textarea.title-form__input-title::placeholder {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 .title-form-text div {
     display: flex;
     flex-wrap: nowrap;
@@ -347,6 +357,12 @@ header .header {
     .title-form-text div {
         flex-wrap: wrap;
     }
+}
+
+.title-form-category select {
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
 }
 
 /* File input */
@@ -513,116 +529,172 @@ span.drop-zone__file-name::after {
 /* Boost counter */
 
 .boost {
-    padding: 20px 30px !important;
+    padding: 13px !important;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 720px) {
     .boost {
-        padding: 15px 20px !important;
-    }
-}
-
-@media screen and (max-width: 760px) {
-    .boost {
-        padding: 15px 25px !important;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .boost {
-        padding: 10px 15px !important;
+        padding: 10px !important;
     }
 }
 
 .boost__container {
-    border-radius: 15px;
-    background-color: var(--transparent-gray);
     display: flex;
-    flex-direction: column;
-    padding: 30px;
-}
-
-@media screen and (max-width: 720px) {
-    .boost__container {
-        padding: 20px 30px;
-    }
-}
-
-.boost input {
-    color: var(--orange);
-    font-size: 32px;
-    font-weight: 800;
-    text-align: center;
-    border: 1px solid var(--input-border);
-    border-radius: 15px;
-    background-color: var(--input-gray);
-    width: 200px;
-    height: 85px;
-    padding: 0 25px;
-    margin: 5px 20px;
-}
-
-@media screen and (max-width: 920px) {
-    .boost input {
-        font-size: 28px;
-        width: 175px;
-        height: 75px;
-    }
-}
-
-.boost__counter {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
     align-items: center;
-    text-align: center;
+
+    border-radius: 10px;
+    background-color: var(--transparent-gray);
+
+    padding: 20px 20px 35px;
+}
+
+@media screen and (max-width: 880px) {
+    .boost__container {
+        padding: 15px;
+    }
+}
+
+.boost__impressions {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
     gap: 15px;
-    margin: 10px auto;
+
+    width: 100%;
 }
 
-@media screen and (max-width: 720px) {
-    .boost__counter {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 0;
-        margin: 0;
+@media screen and (max-width: 880px) {
+    .boost__impressions {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
-.boost__counter input {
-    justify-self: flex-end;
+.boost__impressions--select {
+    width: 60%;
 }
 
-@media screen and (max-width: 720px) {
-    .boost__counter input {
-        justify-self: center;
+@media screen and (max-width: 880px) {
+    .boost__impressions--select {
+        width: 100%;
     }
 }
 
-.boost__counter span {
-    font-size: 26px;
-    font-weight: 800;
+.boost__impressions label {
+    display: flex;
+    justify-self: flex-start;
+}
+
+.boost__impressions--select select {
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
+
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid var(--input-border);
+    border-radius: 10px;
+    background-color: var(--input-gray);
+
+    width: 100%;
+    min-width: 250px;
+    height: 60px;
+    padding: 0 25px;
+
+    position: relative;
 }
 
 @media screen and (max-width: 920px) {
-    .boost__counter span {
-        font-size: 22px;
+    .boost__impressions--select select {
+        padding: 0 20px;
     }
 }
 
 @media screen and (max-width: 720px) {
-    .boost__counter span {
-        justify-self: center;
-        text-align: center;
+    .boost__impressions--select select {
+        font-size: 18px;
+
+        padding: 0 15px;
     }
 }
 
-.boost__counter--sum br {
-    display: none;
+.boost__impressions--select select::before {
+    position: absolute;
+    display: block;
+    content: '';
+    background-image: url(../images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    top: 40%;
+    right: 20px;
+
+    width: 22px; 
+    height: 22px; 
 }
 
-@media screen and (max-width: 720px) {
-    .boost__counter--sum br {
-        display: inline;
+@media screen and (min-width: 1020px) {
+    .boost__impressions--select select::before {
+        cursor: pointer;
+        position: absolute;
+        content: '';
+        background-image: url(../images/down-arrow.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        top: 22px;
+        right: 22px;
+    
+        width: 22px; 
+        height: 22px; 
+    }
+}
+
+.boost__impressions .boost__impressions--inf {
+    align-self: flex-end;
+
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+
+    width: 40%;
+    min-height: 60px;
+}
+
+@media screen and (max-width: 880px) {
+    .boost__impressions .boost__impressions--inf {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.boost__impressions .boost__impressions--sum {
+    padding-left: 20px;
+    font-size: 38px;
+}
+
+@media screen and (max-width: 880px) {
+    .boost__impressions .boost__impressions--sum {
+        display: flex;
+        justify-content: center;
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .boost__impressions .boost__impressions--sum {
+        font-size: 32px;
+    }
+}
+
+.boost__impressions--sum br {
+    display: inline;
+}
+
+@media screen and (min-width: 720px) {
+    .boost__impressions--sum br {
+        display: none;
     }
 }
 

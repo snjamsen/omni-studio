@@ -90,18 +90,15 @@ function updateThumbnail(dropZoneElement, file) {
 }
 
 // Boost calculate
-let boostResult = document.querySelector(".boost__counter--sum");
+const select = document.getElementById('impressions');
+let boostResult = document.querySelector(".boost__impressions--sum");
 let boostSum = document.querySelector(".boost-sum");
-let boostValue;
 
-function boostInput(boost) {
-  boostValue = +boost.value;
-  boost = "$" + Math.floor(+boost.value * 0.8);
+select.addEventListener('change', function boostInput(boost) {
+  boost = '$' + (select.options[select.selectedIndex].value / 40);
   boostResult.innerHTML = boost;
   boostSum.innerHTML = boost;
-
-  console.log(boostValue);
-}
+});
 
 // Input title
 let titleLenght = document.querySelector(".title-form__input-title--display");
