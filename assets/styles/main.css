@@ -51,6 +51,10 @@
 
 /* Header */
 
+header {
+    margin: 0 auto;
+}
+
 header .header {
     display: flex;
     flex-direction: row;
@@ -61,9 +65,28 @@ header .header {
     margin-bottom: 50px;
 }
 
+@media screen and (max-width: 980px) {
+    header .header {
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    header .header {
+        margin-bottom: 25px;
+    }
+}
+
 @media screen and (max-width: 760px) {
     header .header {
         margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    header .header {
+        width: 90%;
+        padding: 0;
     }
 }
 
@@ -73,13 +96,13 @@ header .header {
 
 @media screen and (min-width:390px) {
     .mowpod-logo {
-        width: 115px;
+        width: 130px;
     }
 }
 
 @media screen and (min-width: 720px) {
     .mowpod-logo {
-        width: 150px;
+        width: 155px;
     }
 }
 
@@ -89,7 +112,7 @@ header .header {
 
 @media screen and (min-width:390px) {
     .omni-logo {
-        width: 150px;
+        width: 200px;
     }
 }
 
@@ -183,7 +206,6 @@ header .header {
     display: inline-block;
 
     padding-bottom: 5px;
-    width: 100%;
 }
 
 @media screen and (max-width: 920px) {
@@ -331,6 +353,7 @@ header .header {
 
 .file-upload--container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
@@ -338,28 +361,11 @@ header .header {
     margin-bottom: 15px;
 }
 
-/* Test */
-  /* .drop-zone__thumb {
-    width: 100%;
-    height: 60px;
-    overflow: hidden;
-    background-color: #cccccc;
-    background-size: cover;
-    position: relative;
-  }
-  
-  .drop-zone__thumb::after {
-    content: attr(data-label);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px 0;
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.75);
-    font-size: 14px;
-    text-align: center;
-  } */
+@media screen and (max-width: 880px) {
+    .file-upload--container {
+        flex-direction: column;
+    }
+}
 
 .drop-zone {
     display: flex;
@@ -372,22 +378,33 @@ header .header {
     color: var(--placeholder-text);
     transition: .1s ease;
 
-    height: 60px;
     width: 78%;
+    height: 60px;
+}
+
+.drop-zone:hover {
+    
+}
+
+@media screen and (max-width: 880px) {
+    .drop-zone {
+        text-align: center;
+
+        width: 100%;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .drop-zone {
+        height: 150px;
+    }
 }
 
 .drop-zone--over {
     color: transparent;
     border-style: solid;
     background-color: rgba(255, 255, 255, 0.718);
-}
-
-@media screen and (max-width: 880px) {
-    .drop-zone {
-        position: absolute;
-        overflow: hidden;
-        margin-left: -9999px;
-    }
 }
 
 span.drop-zone__prompt,
@@ -398,7 +415,6 @@ span.drop-zone__file-name {
     font-size: 20px;
     font-weight: 400;
     font-style: italic;
-    
 
     width: 100%;
     height: 100%;
@@ -412,7 +428,15 @@ span.drop-zone__file-name {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 880px) {
+    span.drop-zone__prompt,
+    span.drop-zone__file-name {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 390px) {
     span.drop-zone__prompt {
         font-size: 16px;
     }
@@ -481,7 +505,7 @@ span.drop-zone__file-name::after {
     .file-input-button--conatiner .file-input-button {
         font-size: 18px;
 
-        margin: 15px auto;
+        margin: 0 auto;
     }
 }
 
