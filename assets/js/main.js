@@ -22,7 +22,7 @@ window.addEventListener("load", function () {
   preloader.classList.remove("show-preloader");
 });
 
-// File input
+// File drop uploader
 document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
   const dropZoneElement = inputElement.closest(".drop-zone");
 
@@ -74,12 +74,12 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
 function updateThumbnail(dropZoneElement, file) {
   let thumbnailElement = dropZoneElement.querySelector(".drop-zone__file-name");
 
-  // First time - remove the prompt
+  // Remove the prompt
   if (dropZoneElement.querySelector(".drop-zone__prompt")) {
     dropZoneElement.querySelector(".drop-zone__prompt").remove();
   }
 
-  // First time - there is no thumbnail element, so lets create it
+  // Create thumbnail element
   if (!thumbnailElement) {
     thumbnailElement = document.createElement("span");
     thumbnailElement.classList.add("drop-zone__file-name");

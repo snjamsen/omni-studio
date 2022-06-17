@@ -283,8 +283,7 @@ header .header {
 .title-form textarea,
 .title-form textarea::placeholder,
 .title-form input,
-.title-form input::placeholder,
-.title-form select {
+.title-form input::placeholder {
     font-size: 22px;
     font-weight: 400;
     font-style: normal;
@@ -294,8 +293,7 @@ header .header {
     .title-form textarea,
     .title-form textarea::placeholder,
     .title-form input,
-    .title-form input::placeholder,
-    .title-form select {
+    .title-form input::placeholder {
         font-size: 20px;
     }
 }
@@ -356,13 +354,81 @@ header .header {
 @media screen and (max-width: 920px) {
     .title-form-text div {
         flex-wrap: wrap;
+
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    textarea.title-form__input-keywords {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    textarea.title-form__input-keywords {
+        padding-top: 17px;
     }
 }
 
 .title-form-category select {
+    cursor: pointer;
+    line-height: 30px;
+
     -moz-appearance: none; 
     -webkit-appearance: none; 
     appearance: none;
+}
+
+.title-form-category {
+    position: relative;
+}
+
+.title-form-category::before {
+    position: absolute;
+    display: block;
+    content: '';
+    background-image: url(../images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    top: 50%;
+    right: 20px;
+
+    width: 22px; 
+    height: 22px; 
+    z-index: 1;
+}
+
+@media screen and (min-width: 920px) {
+    .title-form-category::before {
+        cursor: pointer;
+        position: absolute;
+        content: '';
+        background-image: url(../images/down-arrow.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        top: 68px;
+        right: 22px;
+    
+        width: 22px; 
+        height: 22px; 
+    }
+}
+
+@media screen and (min-width: 920px) {
+    input.title-form__input-rss,
+    input.title-form__input-rss::placeholder {
+        font-size: 20px;
+    }
+    textarea.title-form__input-keywords,
+    textarea.title-form__input-keywords::placeholder {
+        font-size: 20px;
+    }
+    .title-form-category select {
+        font-size: 20px;
+    }
 }
 
 /* File input */
@@ -545,7 +611,7 @@ span.drop-zone__file-name::after {
     border-radius: 10px;
     background-color: var(--transparent-gray);
 
-    padding: 20px 20px 35px;
+    padding: 20px 20px 40px;
 }
 
 @media screen and (max-width: 880px) {
@@ -590,6 +656,7 @@ span.drop-zone__file-name::after {
     -webkit-appearance: none; 
     appearance: none;
 
+    cursor: pointer;
     color: var(--white);
     font-size: 20px;
     font-weight: 500;
@@ -619,7 +686,11 @@ span.drop-zone__file-name::after {
     }
 }
 
-.boost__impressions--select select::before {
+.boost__impressions--select {
+    position: relative;
+}
+
+.boost__impressions--select::before {
     position: absolute;
     display: block;
     content: '';
@@ -627,15 +698,16 @@ span.drop-zone__file-name::after {
     background-repeat: no-repeat;
     background-size: cover;
 
-    top: 40%;
+    top: 58%;
     right: 20px;
 
     width: 22px; 
     height: 22px; 
+    z-index: 1;
 }
 
-@media screen and (min-width: 1020px) {
-    .boost__impressions--select select::before {
+@media screen and (min-width: 920px) {
+    .boost__impressions--select::before {
         cursor: pointer;
         position: absolute;
         content: '';
@@ -643,7 +715,7 @@ span.drop-zone__file-name::after {
         background-repeat: no-repeat;
         background-size: cover;
     
-        top: 22px;
+        top: 68px;
         right: 22px;
     
         width: 22px; 
