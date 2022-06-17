@@ -380,7 +380,7 @@ header .header {
     background-repeat: no-repeat;
     background-size: cover;
 
-    top: 50%;
+    top: 52%;
     right: 20px;
 
     width: 22px; 
@@ -1312,6 +1312,29 @@ span.drop-zone__file-name::after {
     margin: 50px auto 0;
 }
 
+/* Footer */
+
+.social-icons ul {
+    display: flex;
+    gap: 3px;
+
+    padding-left: 0;
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons img {
+    width: 40px;
+
+    transition: 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
 /* Background elements */
 
 .backgrounds {
@@ -1515,7 +1538,7 @@ span.drop-zone__file-name::after {
 
 .title h1 {
     transform: rotate(-3.5deg);
-    width: 100%;
+    width: 95%;
     margin: auto auto;
     padding-top: 25px;
     text-align: center;
@@ -1533,6 +1556,12 @@ span.drop-zone__file-name::after {
         min-width: 300px;
         padding-left: 0;
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .title h1 {
+        font-size: 42px;
     }
 }
 

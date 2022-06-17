@@ -19,7 +19,9 @@ const preloader = document.querySelector(".preloader");
 preloader.classList.add("show-preloader");
 
 window.addEventListener("load", function () {
-  preloader.classList.remove("show-preloader");
+  setTimeout(function () {
+    preloader.classList.remove('show-preloader');
+  }, 0500);
 });
 
 // File drop uploader
