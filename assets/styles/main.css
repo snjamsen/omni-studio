@@ -359,18 +359,6 @@ header .header {
     }
 }
 
-@media screen and (max-width: 500px) {
-    textarea.title-form__input-keywords {
-        padding-top: 10px;
-    }
-}
-
-@media screen and (max-width: 920px) {
-    textarea.title-form__input-keywords {
-        padding-top: 17px;
-    }
-}
-
 .title-form-category select {
     cursor: pointer;
     line-height: 30px;
@@ -415,6 +403,10 @@ header .header {
         width: 22px; 
         height: 22px; 
     }
+}
+
+input.title-form__input-rss::placeholder {
+    font-style: italic;
 }
 
 @media screen and (min-width: 920px) {
@@ -1168,6 +1160,10 @@ span.drop-zone__file-name::after {
     .submit-boost h1 {
         font-size: 34px;
     }
+}
+
+.submit-boost h1 .boost-sum br {
+    display: inline;
 }
 
 @media screen and (min-width: 920px) {
