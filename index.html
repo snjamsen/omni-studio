@@ -38,7 +38,7 @@
     <link rel="preload" as="image" crossorigin="anonymous" href="./assets/images/gifs/computer.gif"/>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<body>
+<body class="overflow-hiden">
     <div class="preloader"><img src="./assets/images/mowpod-audio-logo.png" alt="logotype"></div>
     <div class="backgrounds">
         <div class="background__rainbow">
@@ -60,7 +60,9 @@
             <div class="title-form">
                 <div class="how-this-works">
                     <h4 class="orange-text">How this works?</h4>
-                    <p>Omny has partnered with mowpod lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam dicta voluptatem est placeat beatae. Unde enim id earum aspernatur molestiae perspiciatis labore ad temporibus optio numquam, totam nam provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellendus doloribus sunt, aliquam libero quo enim, officia et perspiciatis.</p>
+                    <p>Omny has partnered with mowpod lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam dicta voluptatem est placeat beatae. Unde enim id earum aspernatur molestiae perspiciatis labore ad temporibus optio numquam, totam nam provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellendus doloribus sunt, aliquam libero quo enim, officia et perspiciatis.<br>
+                        <span class="pop-up-open orange-text" >Read More</span> 
+                    </p>
                 </div>
                 <div class="file-upload">
                     <label for="fileInput" class="orange-text">Upload your MP3 file</label>
@@ -88,7 +90,7 @@
                 <div class="title-form-category">
                     <label for="category" class="orange-text">Category</label>
                     <select name="category" id="category" required>
-                        <option value="music" hidden>Music</option>
+                        <option value="" hidden>Select a category</option>
                         <option value="arts">Arts</option>
                         <option value="business">Business</option>
                         <option value="comedy">Comedy</option>
@@ -100,7 +102,7 @@
                         <option value="leisure">Leisure</option>
                         <option value="music">Music</option>
                         <option value="news">News</option>
-                        <option value="religion&spirituality">Religion & Spirituality</option>
+                        <option value="religion & spirituality">Religion & Spirituality</option>
                         <option value="science">Science</option>
                         <option value="society & culture">Society & Culture</option>
                         <option value="sports">Sports</option>
@@ -121,7 +123,7 @@
                     <div class="boost__impressions">
                         <div class="boost__impressions--select">
                             <label for="impressions" class="orange-text">Impressions</label>
-                            <select name="impressions" id="impressions" required>
+                            <select name="impressions" id="impressions" size="1" required>
                                 <option value="4000" selected>4000</option>
                                 <option value="6000">6000</option>
                                 <option value="8000">8000</option>
@@ -350,18 +352,23 @@
             </div>
         </div>
     </footer>
-    <div class="modal fade" id="scheduleDemo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="scheduleDemoLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    content
-                </div>
+
+    <div class="pop-up--container">
+        <div class="pop-up">
+            <div class="pop-up__header">
+                <h4 class="orange-text">How this works?</h4>
+                <img class="pop-up-close" src="./assets/images/close-btn.svg" alt="close window">
+            </div>
+            <div class="pop-up__text">
+                <p>Omny has partnered with mowpod lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem..</p>
+                <span class="read-less orange-text">Read Less</span>
             </div>
         </div>
     </div>
+
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>

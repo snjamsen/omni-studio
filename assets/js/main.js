@@ -24,6 +24,28 @@ window.addEventListener("load", function () {
   }, 0500);
 });
 
+// Pop-up
+const popUpOpen = document.querySelector(".pop-up-open");
+const popUp = document.querySelector(".pop-up--container");
+const body = document.querySelector("body");
+const popUpClose = document.querySelector(".pop-up-close");
+const readLess = document.querySelector(".read-less");
+
+popUpOpen.addEventListener("click", () => {
+  popUp.classList.add("pop-up--active");
+  body.classList.add("overflow-hiden"); 
+});
+
+popUpClose.addEventListener("click", () => {
+  popUp.classList.remove("pop-up--active");
+  body.classList.remove("overflow-hiden");
+});
+
+readLess.addEventListener("click", () => {
+  popUp.classList.remove("pop-up--active");
+  body.classList.remove("overflow-hiden");
+});
+
 // File drop uploader
 document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
   const dropZoneElement = inputElement.closest(".drop-zone");
