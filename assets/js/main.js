@@ -7,9 +7,8 @@ jQuery(document).ready(function ($) {
     center: true,
   });
 
-  // burgermenu
-  $(".burgermenu-open, .burgermenu-close").on("click", function () {
-    $(".burgermenu").toggleClass("active");
+  $(document).ready(function() {
+    $("#MyModal").modal();
   });
 });
 

@@ -6169,6 +6169,7 @@ fieldset:disabled .btn {
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
+  z-index: 999999;
 }
 
 .modal-dialog {
@@ -12124,7 +12125,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 8px;
+  width: 1px;
 }
 
 body::-webkit-scrollbar-track {
