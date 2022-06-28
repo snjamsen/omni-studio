@@ -52,10 +52,21 @@
 /* Header */
 
 header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
     margin: 0 auto;
 }
 
-header .header {
+@media screen and (max-width: 1020px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+.header--logotypes {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -66,25 +77,25 @@ header .header {
 }
 
 @media screen and (max-width: 980px) {
-    header .header {
+    .header--logotypes {
         margin-bottom: 35px;
     }
 }
 
 @media screen and (max-width: 880px) {
-    header .header {
+    .header--logotypes {
         margin-bottom: 25px;
     }
 }
 
 @media screen and (max-width: 760px) {
-    header .header {
+    .header--logotypes {
         margin-top: 25px;
     }
 }
 
 @media screen and (max-width: 390px) {
-    header .header {
+    .header--logotypes {
         width: 90%;
         padding: 0;
     }
@@ -120,6 +131,25 @@ header .header {
     .omni-logo {
         width: 250px;
     }
+}
+
+.header--login {
+    
+
+}
+
+.header--login a {
+    display: flex;
+    justify-self: flex-end;
+
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s ease;
+    color: var(--orange);
+}
+
+.header--login a:hover {
+    color: #fff;
 }
 
 /* Main */
