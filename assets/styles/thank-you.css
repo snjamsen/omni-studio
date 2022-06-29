@@ -1,5 +1,9 @@
-/* T
-ank you page styles */
+/* Thank you page styles */
+
+.header--thank-you {
+    display: flex;
+    justify-content: space-between;
+}
 
 .thank-you-title {
     display: flex;

@@ -4,6 +4,7 @@
     --orange: #f59a00;
     --blue-text: #1998c4;
     --background-color: #2a2a2a;
+    --background-color-light: #4a4a4a;
     --transparent-gray: rgba(20, 20, 20, 0.8);
     --input-gray: rgba(37, 37, 37, 0.5);
     --input-border: rgba(250, 250, 250, 0.8);
@@ -154,12 +155,16 @@ header .header--login {
 @media screen and (min-width: 390px) {
     .header--login a {
         font-size: 18px;
+
+        padding-right: 8px;
     }
 }
 
 @media screen and (min-width: 720px) {
     .header--login a {
         font-size: 22px;
+
+        padding-right: 10px;
     }
 }
 
@@ -358,7 +363,7 @@ header .header--login {
 .title-form textarea::placeholder,
 .title-form input,
 .title-form input::placeholder {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     font-style: normal;
 }
@@ -368,7 +373,7 @@ header .header--login {
     .title-form textarea::placeholder,
     .title-form input,
     .title-form input::placeholder {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -488,8 +493,8 @@ input.title-form__input-rss::placeholder {
     input.title-form__input-rss::placeholder {
         font-size: 20px;
     }
-    textarea.title-form__input-keywords,
-    textarea.title-form__input-keywords::placeholder {
+    input.title-form__input-keywords,
+    input.title-form__input-keywords::placeholder {
         font-size: 20px;
     }
     .title-form-category select {
@@ -655,6 +660,125 @@ span.drop-zone__file-name::after {
         font-size: 18px;
 
         margin: 0 auto;
+    }
+}
+
+/* Input Tags */
+.tags {
+    width: 100%;
+}
+
+.tags .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    cursor: text;
+    border: 1px solid var(--input-border);
+    border-radius: 10px;
+    background-color: var(--input-gray);
+
+    width: 100%;
+    min-height: 120px;
+    padding: 10px 3px;
+}
+
+@media screen and (min-width: 390px) {
+    .tags .tag-container {
+        padding: 10px 8px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .tags .tag-container {
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .tags .tag-container {
+        padding: 10px 13px;
+    }
+}
+
+.tag-container textarea {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+
+    min-width: 100px;
+    width: 100%;
+    height: 40px;
+    margin: 5px;
+    padding: 13px 5px 5px;
+
+    outline: none;
+}
+
+.tag-container .tag {
+    display: flex;
+    align-items: center;
+
+    cursor: default;
+    border-color: var(--background-color-light);
+    background-color: var(--background-color-light);
+    border-radius: 7px;
+
+    width: fit-content;
+    margin: 5px;
+    padding: 5px;
+
+    transition: .2s ease;
+}
+
+.tag-container .tag:hover {
+    background-color: var(--background-color);
+    border: 1px solid var(--input-border);
+
+    transform: scale(1.03);
+}
+
+.tag-container .tag span {
+    font-size: 16px;
+
+    min-width: auto;
+    padding: 3px;
+}
+
+@media screen and (min-width: 720px) {
+    .tag-container .tag span {
+        font-size: 18px;
+    }
+}
+
+.tag-container .tag .material-icons {
+    font-size: 18px;
+    color: var(--input-border);
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.tag-container .tag .material-icons:hover {
+    color: #fff;
+    transform: scale(1.12);
+}
+
+.tag-container .tag .material-icons:active {
+    transform: scale(1);
+}
+
+@media screen and (min-width: 720px) {
+    .tag-container .tag .material-icons {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    .tag-container .tag .material-icons {
+        font-size: 22px;
     }
 }
 
@@ -1442,8 +1566,6 @@ span.drop-zone__file-name::after {
     width: 100%;
     min-height: 300px;
     position: absolute;
-
-    transform: rotate(30deg);
 
     overflow: hidden;
     z-index: -2;
