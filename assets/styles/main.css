@@ -1301,15 +1301,18 @@ span.drop-zone__file-name::after {
     max-width: 200px;
 }
 
-.card-input--login {
+.card__login {
     border-top: 1px solid rgba(250, 250, 250, 0.15);
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.card-input--login {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     gap: 30px;
     width: 100%;
-    padding-top: 30px;
-    margin-top: 30px;
 }
 
 
@@ -1341,8 +1344,14 @@ span.drop-zone__file-name::after {
 }
 
 .card-input--mail-description {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
+}
+
+@media screen and (min-width: 390px) {
+    .card-input--mail-description {
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 720px) {
