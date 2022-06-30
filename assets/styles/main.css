@@ -1335,6 +1335,24 @@ span.drop-zone__file-name::after {
     }
 }
 
+.card-input--password {
+    display: flex;
+    align-self: flex-end;
+}
+
+.card-input--mail-description {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 720px) {
+    .card-input--mail-description {
+        font-size: 18px;
+    }
+}
+
+/* Submit section */
+
 .submit-boost {
     text-align: center;
     margin-bottom: 25px;
